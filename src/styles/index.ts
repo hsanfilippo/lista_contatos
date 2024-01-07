@@ -24,6 +24,8 @@ export const RegularButton = styled.button`
   padding: 16px;
   border: 2px solid #8944cf;
   border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
 `
 
 export default EstiloGlobal

@@ -1,7 +1,7 @@
 import HeaderContato from '../../components/HeaderContato'
 import Contato from '../../containers/Contato'
 
-const ContatoPag = () => {
+const IdContato = () => {
   return (
     <>
       <HeaderContato />
@@ -10,4 +10,4 @@ const ContatoPag = () => {
   )
 }
 
-export default ContatoPag
+export default IdContato

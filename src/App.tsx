@@ -3,8 +3,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import Contatos from './pages/Contatos'
 import Home from './pages/Home'
-import ContatosNew from './pages/ContatosNew'
-import Contato from './pages/Contato'
+import ContatosNew from './pages/New'
+import IdContato from './pages/IdContato'
 
 const routes = createBrowserRouter([
   {
@@ -21,7 +21,7 @@ const routes = createBrowserRouter([
   },
   {
     path: '/contatos/id_contato',
-    element: <Contato />
+    element: <IdContato />
   }
 ])
 

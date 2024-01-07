@@ -6,6 +6,7 @@ const HeaderContato = () => {
       <S.NavBar>
         <S.Button>&lt; Voltar</S.Button>
       </S.NavBar>
+      <S.Title>Adicionar Contato</S.Title>
     </>
   )
 }
