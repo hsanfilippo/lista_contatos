@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import EstiloGlobal, { GlobalContainer } from './styles';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
+import Contatos from './pages/Contatos';
+import Home from './pages/Home';
+import ContatosNew from './pages/ContatosNew';
+import ContatoPag from './pages/ContatoPag';
+
+const routes = createBrowserRouter([
+  {
+    path: '/',
+    element: <Home />
+  },
+  {
+    path: '/contatos',
+    element: <Contatos />
+  },
+  {
+    path: '/contatos/new',
+    element: <ContatosNew />
+  },
+  {
+    path: '/contatos/id_contato',
+    element: <ContatoPag />
+  },
+])
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <EstiloGlobal />
+      <GlobalContainer>
+          <RouterProvider router={routes} />
+      </GlobalContainer>
+    </>
+  )
 }
 
-export default App;
+export default App
