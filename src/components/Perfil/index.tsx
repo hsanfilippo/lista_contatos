@@ -1,26 +1,29 @@
-import { UserInfo } from './styles'
+import { RegularButton } from '../../styles'
+import * as S from './styles'
 
 const PerfilUser = () => {
   return (
     <>
-      <UserInfo>
-        <img src="http://via.placeholder.com/200x200" alt="" />
-        <div>
-          <p>Olá, Nome Sobrenome da Silva</p>
-          <p>O que deseja fazer?</p>
-        </div>
-      </UserInfo>
-      <div>
+      <S.UserInfo>
+        <S.Imagem>
+          <img src="http://via.placeholder.com/200x200" alt="" />
+        </S.Imagem>
+        <S.Text>
+          <S.Title>Olá,</S.Title>
+          <S.UserName>Nome Sobrenome da Silva</S.UserName>
+        </S.Text>
+      </S.UserInfo>
+      <S.SearchBar>
+        <p>O que deseja fazer?</p>
         <form>
-          <input type="text" placeholder="Buscar contato" />
-          <button>P</button>
+          <S.SearchInput type="text" placeholder="Buscar contato" />
+          <S.SearchButton>P</S.SearchButton>
         </form>
-      </div>
-      <div>
-        <button>Lista de Contatos</button>
-        <button>Novo Contato</button>
-        <button>Novo Contato</button>
-      </div>
+      </S.SearchBar>
+      <S.Buttons>
+        <RegularButton>Lista de Contatos</RegularButton>
+        <RegularButton>Novo Contato</RegularButton>
+      </S.Buttons>
     </>
   )
 }

@@ -19,4 +19,11 @@ export const GlobalContainer = styled.div`
   margin: 0 auto;
 `
 
+export const RegularButton = styled.button`
+  background-color: rgb(137, 68, 207, 0.1);
+  padding: 16px;
+  border: 2px solid #8944cf;
+  border-radius: 8px;
+`
+
 export default EstiloGlobal
