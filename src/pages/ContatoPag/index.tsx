@@ -1,9 +1,7 @@
-import HeaderContato from "../../components/HeaderContato";
+import HeaderContato from '../../components/HeaderContato'
 
 const ContatoPag = () => {
-    return (
-        <HeaderContato />
-    )
+  return <HeaderContato />
 }
 
 export default ContatoPag

@@ -1,11 +1,11 @@
-import NewContato from "../../containers/NewContato";
+import NewContato from '../../containers/NewContato'
 
 const ContatosNew = () => {
-    return (
-        <>
-            <NewContato />
-        </>
-    )
+  return (
+    <>
+      <NewContato />
+    </>
+  )
 }
 
 export default ContatosNew

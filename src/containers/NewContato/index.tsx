@@ -1,11 +1,11 @@
-import Header from "../../components/Header";
+import Header from '../../components/Header'
 
 const NewContato = () => {
-    return (
-        <>
-            <Header />
-        </>
-    )
+  return (
+    <>
+      <Header />
+    </>
+  )
 }
 
 export default NewContato

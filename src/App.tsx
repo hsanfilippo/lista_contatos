@@ -1,10 +1,10 @@
-import EstiloGlobal, { GlobalContainer } from './styles';
+import EstiloGlobal, { GlobalContainer } from './styles'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-import Contatos from './pages/Contatos';
-import Home from './pages/Home';
-import ContatosNew from './pages/ContatosNew';
-import ContatoPag from './pages/ContatoPag';
+import Contatos from './pages/Contatos'
+import Home from './pages/Home'
+import ContatosNew from './pages/ContatosNew'
+import ContatoPag from './pages/ContatoPag'
 
 const routes = createBrowserRouter([
   {
@@ -22,7 +22,7 @@ const routes = createBrowserRouter([
   {
     path: '/contatos/id_contato',
     element: <ContatoPag />
-  },
+  }
 ])
 
 function App() {
@@ -30,7 +30,7 @@ function App() {
     <>
       <EstiloGlobal />
       <GlobalContainer>
-          <RouterProvider router={routes} />
+        <RouterProvider router={routes} />
       </GlobalContainer>
     </>
   )
