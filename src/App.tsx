@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Contatos from './pages/Contatos'
 import Home from './pages/Home'
 import ContatosNew from './pages/ContatosNew'
-import ContatoPag from './pages/ContatoPag'
+import Contato from './pages/Contato'
 
 const routes = createBrowserRouter([
   {
@@ -21,7 +21,7 @@ const routes = createBrowserRouter([
   },
   {
     path: '/contatos/id_contato',
-    element: <ContatoPag />
+    element: <Contato />
   }
 ])
 

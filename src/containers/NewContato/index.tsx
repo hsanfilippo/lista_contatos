@@ -1,9 +1,9 @@
-import Header from '../../components/Header'
+import HeaderContato from '../../components/HeaderContato'
 
 const NewContato = () => {
   return (
     <>
-      <Header />
+      <HeaderContato />
     </>
   )
 }
