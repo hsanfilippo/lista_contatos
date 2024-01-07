@@ -7,15 +7,15 @@ const HeaderContato = () => {
             <S.Button>&lt; Voltar</S.Button>
         </S.NavBar>
         <S.Image src="http://via.placeholder.com/350x350" />
-        <div>
-            <p>Nome e Sobrenome</p>
-            <p>email_exemplo@lorem.com</p>
-            <p>+55 11 91234-5678</p>
-            <div>
-                <button>Editar</button>
-                <button>Excluir Contato</button>
+        <S.ContainerInfo>
+            <S.Name>Trevor Phillips <br/>&quot;TP Industries&quot;</S.Name>
+            <S.Email>email_exemplo_1234@loremteste.com</S.Email>
+            <S.Tel>+55 11 91234-5678</S.Tel>
+            <div className="button-area">
+                <S.ButtonEdit>Editar</S.ButtonEdit>
+                <S.ButtonRemove>Excluir Contato</S.ButtonRemove>
             </div>
-        </div>
+        </S.ContainerInfo>
         </>
     )
 }
