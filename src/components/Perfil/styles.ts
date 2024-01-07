@@ -10,6 +10,5 @@ export const UserInfo = styled.div`
   }
 
   div {
-    display: block;
   }
 `
