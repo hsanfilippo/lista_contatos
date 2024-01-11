@@ -1,11 +1,11 @@
-import HeaderContato from '../../components/HeaderContato'
+import HeaderNew from '../../components/HeaderNew'
 import { RegularButton } from '../../styles'
 import * as S from './styles'
 
 const NewContato = () => {
   return (
     <>
-      <HeaderContato />
+      <HeaderNew />
       <S.Form>
         <S.Label htmlFor="nome">Nome</S.Label>
         <S.Input placeholder="texto de teste 1234" type="text" name="nome" />

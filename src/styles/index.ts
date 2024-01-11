@@ -21,11 +21,18 @@ export const GlobalContainer = styled.div`
 
 export const RegularButton = styled.button`
   background-color: rgb(137, 68, 207, 0.1);
-  padding: 16px;
+  padding: 8px;
   border: 2px solid #8944cf;
   border-radius: 8px;
   font-weight: bold;
   font-size: 16px;
+  cursor: pointer;
+  transition: ease 0.5s;
+
+  &:hover {
+    background-color: rgb(137, 68, 207, 0.3);
+    transition: ease 0.5s;
+  }
 `
 
 export default EstiloGlobal

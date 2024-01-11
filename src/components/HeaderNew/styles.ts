@@ -23,7 +23,7 @@ export const Button = styled.button`
 `
 
 export const Title = styled.h3`
-  font-size: 24px;
+  font-size: 32px;
   text-align: center;
   padding: 16px;
 `

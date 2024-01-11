@@ -3,7 +3,9 @@ import * as S from './styles'
 const Contato = () => {
   return (
     <>
-      <S.Image src="http://via.placeholder.com/350x350" />
+      <S.ImageContainer>
+        <img src="http://via.placeholder.com/350x350" />
+      </S.ImageContainer>
       <S.ContainerInfo>
         <S.Name>
           Trevor Phillips <br />

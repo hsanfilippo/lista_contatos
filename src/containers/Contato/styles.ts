@@ -49,8 +49,10 @@ export const ButtonRemove = styled.button`
   }
 `
 
-export const Image = styled.img`
-  width: 100vw;
+export const ImageContainer = styled.div`
+  img {
+    width: 100%;
+  }
 `
 
 export const Name = styled.p`
