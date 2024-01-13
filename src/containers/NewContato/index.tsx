@@ -1,8 +1,16 @@
 import HeaderNew from '../../components/HeaderNew'
+import { useDispatch } from 'react-redux'
 import { RegularButton } from '../../styles'
 import * as S from './styles'
+import { FormEvent } from 'react'
 
 const NewContato = () => {
+  const dispatch = useDispatch()
+
+  const adicionarContato = (e: FormEvent) => {
+    e.preventDefault()
+  }
+
   return (
     <>
       <HeaderNew />
@@ -15,7 +23,7 @@ const NewContato = () => {
         <S.Input placeholder="texto de teste 1234" type="email" name="email" />
         <S.Label htmlFor="tel">Telefone</S.Label>
         <S.Input placeholder="texto de teste 1234" type="tel" name="tel" />
-        <RegularButton>Salvar</RegularButton>
+        <RegularButton type="submit">Salvar</RegularButton>
       </S.Form>
     </>
   )

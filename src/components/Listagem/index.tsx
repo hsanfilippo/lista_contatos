@@ -1,26 +1,27 @@
+import { useSelector } from 'react-redux'
 import { ContainerListagem, ItemList, List, ListTitle } from './styles'
+import { RootReducer } from '../../store'
+import ContatoClass from '../../models/Contato'
+import Contato from '../Contato/index'
 
 const Listagem = () => {
+  const { itens } = useSelector((state: RootReducer) => state.contatos)
+
   return (
     <ContainerListagem>
-      <List>
-        <ListTitle>A</ListTitle>
-        <ItemList>Abner</ItemList>
-        <ItemList>Alberto</ItemList>
-        <ItemList>Alan</ItemList>
-        <ItemList>Ana</ItemList>
-        <ItemList>Abner</ItemList>
-        <ItemList>Alberto</ItemList>
-        <ItemList>Alan</ItemList>
-        <ItemList>Ana</ItemList>
-      </List>
-      <List>
-        <ListTitle>B</ListTitle>
-        <ItemList>Bianca</ItemList>
-        <ItemList>Bernardo</ItemList>
-        <ItemList>Bruno</ItemList>
-        <ItemList>Biel</ItemList>
-      </List>
+      <ul>
+        {itens.map((c) => (
+          <li key={c.idtask}>
+            <Contato
+              nome={c.nome}
+              apelido={c.apelido}
+              email={c.email}
+              tel={c.tel}
+              idtask={c.idtask}
+            />
+          </li>
+        ))}
+      </ul>
     </ContainerListagem>
   )
 }
