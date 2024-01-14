@@ -1,16 +1,16 @@
-import Contato from '../../models/Contato'
 import ContatoNome from '../../components/ContatoNome'
+import * as S from './styles'
 
-import { ContainerListagem, ItemList, List, ListTitle } from './styles'
+import { ContainerListagem } from './styles'
 
-type ListagemProps = Contato
-
-const Listagem = ({ nome }: ListagemProps) => {
+const Listagem = () => {
   return (
     <ContainerListagem>
       <div>
-        <h1>Lista de contatos</h1>
-        <ContatoNome />
+        <S.ListTitle>Lista de contatos</S.ListTitle>
+        <ul>
+          <ContatoNome />
+        </ul>
       </div>
     </ContainerListagem>
   )
