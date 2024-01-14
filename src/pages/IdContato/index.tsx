@@ -1,5 +1,5 @@
 import HeaderContato from '../../components/HeaderContato'
-import Contato from '../../containers/Contato'
+import Contato from '../../containers/PaginaContato'
 
 const IdContato = () => {
   return (

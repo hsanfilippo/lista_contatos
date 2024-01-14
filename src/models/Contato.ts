@@ -1,9 +1,9 @@
 class Contato {
-  nome: string
+  nome?: string
   apelido?: string
-  email: string
-  tel: number
-  idtask: number
+  email?: string
+  tel?: number
+  idtask?: number
 
   constructor(
     nome: string,

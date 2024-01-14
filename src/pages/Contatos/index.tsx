@@ -1,5 +1,5 @@
 import Header from '../../components/Header'
-import Listagem from '../../components/Listagem'
+import Listagem from '../../containers/Listagem'
 
 const Contatos = () => {
   return (
