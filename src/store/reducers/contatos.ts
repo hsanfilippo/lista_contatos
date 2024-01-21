@@ -8,24 +8,23 @@ type ContatosState = {
 const initialState: ContatosState = {
   itens: [
     {
-      nome: 'Lorena Aya',
+      nome: 'Lorena',
       apelido: 'Lolô',
-      email: 'lolorena.aya@gmail.com',
+      email: 'email3@gmail.com',
       tel: 9063813550,
-      idtask: 1
+      id: 1
     },
     {
-      nome: 'Naomi Takahashi',
-      apelido: 'Mor',
-      email: 'galaxys2lau@gmail.com',
+      nome: 'Naomi',
+      email: 'email2@gmail.com',
       tel: 9063813588,
-      idtask: 2
+      id: 2
     },
     {
-      nome: 'Henrique Sanfilippo',
-      email: 'galaxys2lau@gmail.com',
+      nome: 'Henrique',
+      email: 'email1@gmail.com',
       tel: 9063813588,
-      idtask: 2
+      id: 3
     }
   ]
 }

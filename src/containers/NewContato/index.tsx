@@ -1,14 +1,33 @@
-import HeaderNew from '../../components/HeaderNew'
+import { FormEvent, useState } from 'react'
 import { useDispatch } from 'react-redux'
+import { formActions } from '../../store/reducers/formulario'
+import { addContato } from '../../store/reducers/contatos'
+
+import HeaderNew from '../../components/HeaderNew'
+
 import { RegularButton } from '../../styles'
 import * as S from './styles'
-import { FormEvent } from 'react'
 
 const NewContato = () => {
   const dispatch = useDispatch()
 
+  const [nome, setNome] = useState('')
+  const [apelido, setApelido] = useState('')
+  const [email, setEmail] = useState('')
+  const [tel, setTel] = useState(0)
+
   const adicionarContato = (e: FormEvent) => {
     e.preventDefault()
+
+    dispatch(
+      addContato({
+        nome,
+        apelido,
+        email,
+        tel
+      })
+    )
+    dispatch(formActions.resetarFormulario())
   }
 
   return (

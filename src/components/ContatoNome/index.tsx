@@ -11,7 +11,7 @@ const Contato = () => {
   return (
     <ul>
       {contatosOrdenados.map((contato) => (
-        <S.Li key={contato.idtask}>{contato.nome}</S.Li>
+        <S.Li key={contato.id}>{contato.nome}</S.Li>
       ))}
     </ul>
   )

@@ -3,20 +3,20 @@ class Contato {
   apelido?: string
   email?: string
   tel?: number
-  idtask?: number
+  id?: number
 
   constructor(
     nome: string,
     apelido: string,
     email: string,
     tel: number,
-    idtask: number
+    id: number
   ) {
     this.nome = nome
     this.apelido = apelido
     this.email = email
     this.tel = tel
-    this.idtask = idtask
+    this.id = id
   }
 }
 
