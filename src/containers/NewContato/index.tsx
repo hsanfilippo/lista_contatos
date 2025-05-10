@@ -1,10 +1,11 @@
 import { FormEvent, useState } from 'react'
 import { useDispatch } from 'react-redux'
+
+import Contato from '../../models/Contato'
+
 import { formActions } from '../../store/reducers/formulario'
 import { addContato } from '../../store/reducers/contatos'
-
 import HeaderNew from '../../components/HeaderNew'
-
 import { RegularButton } from '../../styles'
 import * as S from './styles'
 
@@ -24,7 +25,8 @@ const NewContato = () => {
         nome,
         apelido,
         email,
-        tel
+        tel,
+        id: Date.now()
       })
     )
     dispatch(formActions.resetarFormulario())

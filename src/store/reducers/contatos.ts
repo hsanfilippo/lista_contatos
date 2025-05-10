@@ -33,8 +33,8 @@ const contatosSlice = createSlice({
   name: 'contatos',
   initialState,
   reducers: {
-    addContato: (state, action: PayloadAction<ContatosState>) => {
-      console.log('a')
+    addContato: (state, action: PayloadAction<Contato>) => {
+      state.itens.push(action.payload)
     }
   }
 })
