@@ -1,4 +1,4 @@
-import PerfilUser from '../../components/Perfil'
+import PerfilUser from '../../components/PerfilUser'
 
 const Home = () => {
   return (
