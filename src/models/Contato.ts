@@ -1,8 +1,8 @@
 class Contato {
   nome: string
   apelido?: string
-  email: string
-  tel: string
+  email?: string
+  tel?: string
   id: number
 
   constructor(
