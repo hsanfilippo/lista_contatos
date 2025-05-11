@@ -11,19 +11,19 @@ const initialState: ContatosState = {
       nome: 'Lorena',
       apelido: 'Lolô',
       email: 'email3@gmail.com',
-      tel: 9063813550,
+      tel: '9063813550',
       id: 1
     },
     {
       nome: 'Naomi',
       email: 'email2@gmail.com',
-      tel: 9063813588,
+      tel: '9063813588',
       id: 2
     },
     {
       nome: 'Henrique',
       email: 'email1@gmail.com',
-      tel: 9063813588,
+      tel: '9063813588',
       id: 3
     }
   ]
@@ -34,6 +34,7 @@ const contatosSlice = createSlice({
   initialState,
   reducers: {
     addContato: (state, action: PayloadAction<Contato>) => {
+      console.log('Reducer recebeu:', action.payload)
       state.itens.push(action.payload)
     }
   }
