@@ -15,6 +15,11 @@ export const Button = styled.button`
   border: none;
   background-color: transparent;
   color: #000;
+  cursor: pointer;
+
+  &:hover {
+    color: #fff;
+  }
 `
 
 export const ButtonAdd = styled.button`
@@ -25,4 +30,9 @@ export const ButtonAdd = styled.button`
   font-size: 22px;
   border: none;
   border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #aaee3b;
+  }
 `
