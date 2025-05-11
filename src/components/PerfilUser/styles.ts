@@ -5,10 +5,11 @@ export const UserInfo = styled.div`
   margin: 56px 0;
 `
 
-export const Imagem = styled.div`
+export const ImageContainer = styled.div`
   display: flex;
   justify-content: space-around;
-  margin-bottom: 36px;
+  margin-bottom: 24px;
+  height: 256px;
 
   img {
     border-radius: 50%;

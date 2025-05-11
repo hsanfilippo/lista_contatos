@@ -1,5 +1,7 @@
 import { useSelector } from 'react-redux'
 import { RootReducer } from '../../store'
+
+import { HiMail, HiPhone } from 'react-icons/hi'
 import * as S from './styles'
 
 const Contato = () => {
@@ -11,7 +13,12 @@ const Contato = () => {
   return (
     <ul>
       {contatosOrdenados.map((contato) => (
-        <S.Li key={contato.id}>{contato.nome}</S.Li>
+        <>
+          <HiMail />
+          <HiPhone />
+          <S.Li key={contato.id}>{contato.nome}</S.Li>
+          <p>{contato.apelido}</p>
+        </>
       ))}
     </ul>
   )
