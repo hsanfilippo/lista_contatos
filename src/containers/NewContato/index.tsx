@@ -1,14 +1,14 @@
 import { FormEvent, useState } from 'react'
 import { useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 
-import { formActions } from '../../store/reducers/formulario'
 import { addContato } from '../../store/reducers/contatos'
-import HeaderNew from '../../components/HeaderNew'
 import { RegularButton } from '../../styles'
 import * as S from './styles'
 
 const NewContato = () => {
   const dispatch = useDispatch()
+  const navigate = useNavigate()
 
   const [nome, setNome] = useState('')
   const [apelido, setApelido] = useState('')
@@ -17,22 +17,20 @@ const NewContato = () => {
 
   const adicionarContato = (e: FormEvent) => {
     e.preventDefault()
-
-    dispatch(
-      addContato({
-        nome,
-        apelido,
-        email,
-        tel,
-        id: Date.now()
-      })
-    )
-    dispatch(formActions.resetarFormulario())
+    const novoContato = {
+      nome,
+      apelido,
+      email,
+      tel,
+      id: Date.now()
+    }
+    console.log('Adicionando:', novoContato)
+    dispatch(addContato(novoContato))
+    navigate('/contatos')
   }
 
   return (
     <>
-      <HeaderNew />
       <S.Form onSubmit={adicionarContato}>
         <S.Label htmlFor="nome">Nome</S.Label>
         <S.Input
