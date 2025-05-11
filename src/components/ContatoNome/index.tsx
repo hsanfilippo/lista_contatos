@@ -15,19 +15,29 @@ const Contato = () => {
       {contatosOrdenados.map((contato) => (
         <>
           <S.NomeContainer key={contato.id}>
-            <h3>{contato.nome}</h3>
-            {contato.apelido ? (
-              <S.Apelido>&quot;{contato.apelido}&quot;</S.Apelido>
-            ) : (
-              ''
-            )}
+            <S.Nome>
+              {contato.nome}
+              {contato.apelido ? (
+                <S.Apelido>&quot;{contato.apelido}&quot;</S.Apelido>
+              ) : (
+                ''
+              )}
+            </S.Nome>
             <S.IconesContainer>
-              <S.Icone>
-                <HiMail />
-              </S.Icone>
-              <S.Icone>
-                <HiPhone />
-              </S.Icone>
+              {contato.email ? (
+                <S.Icone>
+                  <HiMail />
+                </S.Icone>
+              ) : (
+                ''
+              )}
+              {contato.tel ? (
+                <S.Icone>
+                  <HiPhone />
+                </S.Icone>
+              ) : (
+                ''
+              )}
             </S.IconesContainer>
           </S.NomeContainer>
         </>
