@@ -42,6 +42,14 @@ const ContatoViewEdit = () => {
     }
   }
 
+  const validarCampo = (campo: string, tagCampo: string) => {
+    if (tagCampo === 'apelido') {
+      return campo ? <S.Apelido>&quot;{contato?.apelido}&quot;</S.Apelido> : ''
+    } else if (tagCampo === 'informacoes') {
+      return campo ? <S.Informacoes>{contato?.apelido}</S.Informacoes> : ''
+    }
+  }
+
   return (
     <>
       {contato ? (
@@ -52,6 +60,7 @@ const ContatoViewEdit = () => {
                 <S.ItemDaLista>
                   {isEditando ? (
                     <S.CampoEdicao
+                      placeholder="Nome"
                       value={nome}
                       onChange={(e) => setNome(e.target.value)}
                     />
@@ -63,17 +72,20 @@ const ContatoViewEdit = () => {
                 <S.ItemDaLista>
                   {isEditando ? (
                     <S.CampoEdicao
+                      placeholder="Apelido"
                       value={apelido}
                       onChange={(e) => setApelido(e.target.value)}
                     />
                   ) : (
-                    <S.Apelido>&quot;{contato.apelido}&quot;</S.Apelido>
+                    validarCampo(`${contato.apelido}`, 'apelido')
+                    // <S.Apelido>&quot;{contato.apelido}&quot;</S.Apelido>
                   )}
                 </S.ItemDaLista>
 
                 <S.ItemDaLista>
                   {isEditando ? (
                     <S.CampoEdicao
+                      placeholder="E-mail"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                     />
@@ -85,6 +97,7 @@ const ContatoViewEdit = () => {
                 <S.ItemDaLista>
                   {isEditando ? (
                     <S.CampoEdicao
+                      placeholder="Telefone"
                       value={tel}
                       onChange={(e) => setTel(e.target.value)}
                     />
