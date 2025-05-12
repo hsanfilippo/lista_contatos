@@ -6,6 +6,7 @@ import store from './store/index'
 import Contatos from './pages/Contatos'
 import Home from './pages/Home'
 import ContatosNew from './pages/New'
+import ContatoId from './pages/ContatoId'
 
 const routes = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const routes = createBrowserRouter([
   {
     path: '/contatos/new',
     element: <ContatosNew />
+  },
+  {
+    path: '/contatos/:id',
+    element: <ContatoId />
   }
 ])
 
