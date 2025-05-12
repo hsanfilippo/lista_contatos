@@ -8,8 +8,11 @@ const EstiloGlobal = createGlobalStyle`
         list-style: none;
         text-decoration: none;
         font-family: sans-serif;
-        background-color: #3c3c3c;
         color: #fff;
+
+        body {
+          background-color: #3c3c3c;
+        }
     }
 `
 
@@ -20,7 +23,7 @@ export const GlobalContainer = styled.div`
 `
 
 export const RegularButton = styled.button`
-  background-color: rgb(137, 68, 207, 0.1);
+  background-color: rgb(255, 68, 207, 0.1);
   padding: 8px;
   border: 2px solid #8944cf;
   border-radius: 8px;
@@ -30,7 +33,7 @@ export const RegularButton = styled.button`
   transition: ease 0.5s;
 
   &:hover {
-    background-color: rgb(137, 68, 207, 0.3);
+    background-color: rgba(137, 68, 207, 0.3);
     transition: ease 0.5s;
   }
 `

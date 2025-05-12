@@ -4,7 +4,7 @@ import Listagem from '../../containers/Listagem'
 const Contatos = () => {
   return (
     <>
-      <Header addNew />
+      <Header voltarPara="/" addNew />
       <Listagem />
     </>
   )

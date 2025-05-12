@@ -36,10 +36,20 @@ const contatosSlice = createSlice({
     addContato: (state, action: PayloadAction<Contato>) => {
       console.log('Reducer recebeu:', action.payload)
       state.itens.push(action.payload)
+    },
+    editarContato: (state, action: PayloadAction<Contato>) => {
+      const index = state.itens.findIndex((c) => c.id === action.payload.id)
+      if (index !== -1) {
+        state.itens[index] = action.payload
+      }
+    },
+    removerContato: (state, action: PayloadAction<number>) => {
+      state.itens = state.itens.filter((c) => c.id !== action.payload)
     }
   }
 })
 
-export const { addContato } = contatosSlice.actions
+export const { addContato, editarContato, removerContato } =
+  contatosSlice.actions
 
 export default contatosSlice.reducer
