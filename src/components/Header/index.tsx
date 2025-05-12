@@ -3,15 +3,16 @@ import { NavBar, Button, ButtonAdd } from './styles'
 
 type Props = {
   addNew?: boolean
+  voltarPara: string
 }
 
-const Header = ({ addNew }: Props) => {
+const Header = ({ addNew, voltarPara }: Props) => {
   const navigate = useNavigate()
 
   return (
     <>
       <NavBar>
-        <Button onClick={() => navigate('/')}>&lt; Voltar</Button>
+        <Button onClick={() => navigate(voltarPara)}>&lt; Voltar</Button>
         {addNew ? (
           <ButtonAdd onClick={() => navigate('/contatos/new')}>+</ButtonAdd>
         ) : (

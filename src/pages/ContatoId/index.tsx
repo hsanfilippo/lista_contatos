@@ -4,7 +4,7 @@ import Header from '../../components/Header'
 const ContatoId = () => {
   return (
     <>
-      <Header />
+      <Header voltarPara="/contatos" />
       <ContatoViewEdit />
     </>
   )

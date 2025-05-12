@@ -4,7 +4,7 @@ import NewContato from '../../containers/NewContato'
 const ContatosNew = () => {
   return (
     <>
-      <Header />
+      <Header voltarPara="/" />
       <NewContato />
     </>
   )
