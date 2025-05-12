@@ -1,7 +1,6 @@
 import { useSelector } from 'react-redux'
 import { RootReducer } from '../../store'
 
-import { HiMail, HiPhone } from 'react-icons/hi'
 import * as S from './styles'
 import { useNavigate } from 'react-router-dom'
 
@@ -26,22 +25,22 @@ const Contato = () => {
             ) : (
               ''
             )}
-            <S.IconesContainer>
+            <S.ListaTag>
               {contato.email ? (
-                <S.Icone>
-                  <HiMail />
-                </S.Icone>
+                <S.ItemLista>
+                  <S.Tag className="tagSelector">e-mail</S.Tag>
+                </S.ItemLista>
               ) : (
                 ''
               )}
               {contato.tel ? (
-                <S.Icone>
-                  <HiPhone />
-                </S.Icone>
+                <S.ItemLista>
+                  <S.Tag className="tagSelector">telefone</S.Tag>
+                </S.ItemLista>
               ) : (
                 ''
               )}
-            </S.IconesContainer>
+            </S.ListaTag>
           </S.NomeContainer>
         </>
       ))}
