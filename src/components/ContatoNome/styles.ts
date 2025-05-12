@@ -1,4 +1,3 @@
-import { HiMail } from 'react-icons/hi'
 import styled from 'styled-components'
 
 export const NomeContainer = styled.li`
@@ -27,12 +26,19 @@ export const Apelido = styled.span`
   font-weight: lighter;
 `
 
-export const IconesContainer = styled.ul`
+export const ListaTag = styled.ul`
   right: 2px;
   margin-left: auto;
   display: flex;
 `
 
-export const Icone = styled.li`
+export const ItemLista = styled.li`
   margin-left: 16px;
+`
+
+export const Tag = styled.span`
+  background-color: #63a000;
+  padding: 6px;
+  font-size: 10px;
+  border-radius: 30px;
 `
