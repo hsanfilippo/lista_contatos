@@ -1,17 +1,38 @@
 import { useParams } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { useState } from 'react'
 
 import { RootReducer } from '../../store'
 import * as S from './styles'
+import { editarContato } from '../../store/reducers/contatos'
 
 const ContatoViewEdit = () => {
+  const dispatch = useDispatch()
   const { id } = useParams<{ id: string }>()
   const contato = useSelector((state: RootReducer) =>
     state.contatos.itens.find((c) => c.id === Number(id))
   )
 
   const [isEditando, setIsEditando] = useState(false)
+  const [nome, setNome] = useState(contato?.nome || '')
+  const [apelido, setApelido] = useState(contato?.apelido || '')
+  const [email, setEmail] = useState(contato?.email || '')
+  const [tel, setTel] = useState(contato?.tel || '')
+
+  const salvarEdicao = () => {
+    if (contato) {
+      dispatch(
+        editarContato({
+          ...contato,
+          nome,
+          apelido,
+          email,
+          tel
+        })
+      )
+      setIsEditando(false)
+    }
+  }
 
   return (
     <>
@@ -21,21 +42,57 @@ const ContatoViewEdit = () => {
             <S.Card>
               <S.Lista>
                 <S.ItemDaLista>
-                  <S.Nome>{contato.nome}</S.Nome>
+                  {isEditando ? (
+                    <S.CampoEdicao
+                      value={nome}
+                      onChange={(e) => setNome(e.target.value)}
+                    />
+                  ) : (
+                    <S.Nome>{contato.nome}</S.Nome>
+                  )}
                 </S.ItemDaLista>
+
                 <S.ItemDaLista>
-                  <S.Apelido>&quot;{contato.apelido}&quot;</S.Apelido>
+                  {isEditando ? (
+                    <S.CampoEdicao
+                      value={apelido}
+                      onChange={(e) => setApelido(e.target.value)}
+                    />
+                  ) : (
+                    <S.Apelido>&quot;{contato.apelido}&quot;</S.Apelido>
+                  )}
                 </S.ItemDaLista>
+
                 <S.ItemDaLista>
-                  <S.Informacoes>{contato.email}</S.Informacoes>
+                  {isEditando ? (
+                    <S.CampoEdicao
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
+                  ) : (
+                    <S.Informacoes>{contato.email}</S.Informacoes>
+                  )}
                 </S.ItemDaLista>
+
                 <S.ItemDaLista>
-                  <S.Informacoes>{contato.tel}</S.Informacoes>
+                  {isEditando ? (
+                    <S.CampoEdicao
+                      value={tel}
+                      onChange={(e) => setTel(e.target.value)}
+                    />
+                  ) : (
+                    <S.Informacoes>{contato.tel}</S.Informacoes>
+                  )}
                 </S.ItemDaLista>
               </S.Lista>
               {isEditando ? (
                 <S.ButtonContainer>
-                  <S.SaveButton onClick={() => setIsEditando(false)}>
+                  <S.SaveButton
+                    onClick={() => {
+                      salvarEdicao()
+                      setIsEditando(false)
+                    }}
+                  >
                     Salvar
                   </S.SaveButton>
                 </S.ButtonContainer>

@@ -78,3 +78,13 @@ export const SaveButton = styled(RegularButton)`
     transition: ease 0.5s;
   }
 `
+
+export const CampoEdicao = styled.input`
+  padding: 8px;
+  color: #000;
+  border-radius: 8px;
+  border: none;
+  width: 70%;
+  height: 45px;
+  text-align: center;
+`
