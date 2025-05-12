@@ -1,6 +1,7 @@
 import { useNavigate, useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { useState } from 'react'
+import { HiMail, HiPhone } from 'react-icons/hi'
 
 import { RootReducer } from '../../store'
 import * as S from './styles'
@@ -42,11 +43,11 @@ const ContatoViewEdit = () => {
     }
   }
 
-  const validarCampo = (campo: string, tagCampo: string) => {
+  const validarCampo = (tagCampo: string) => {
     if (tagCampo === 'apelido') {
-      return campo ? <S.Apelido>&quot;{contato?.apelido}&quot;</S.Apelido> : ''
+      return <S.Apelido>{contato?.apelido}</S.Apelido>
     } else if (tagCampo === 'informacoes') {
-      return campo ? <S.Informacoes>{contato?.apelido}</S.Informacoes> : ''
+      return <S.Informacoes>{contato?.apelido}</S.Informacoes>
     }
   }
 
@@ -77,7 +78,7 @@ const ContatoViewEdit = () => {
                       onChange={(e) => setApelido(e.target.value)}
                     />
                   ) : (
-                    validarCampo(`${contato.apelido}`, 'apelido')
+                    validarCampo('apelido')
                     // <S.Apelido>&quot;{contato.apelido}&quot;</S.Apelido>
                   )}
                 </S.ItemDaLista>
