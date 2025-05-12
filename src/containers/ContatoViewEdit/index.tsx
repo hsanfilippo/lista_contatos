@@ -1,13 +1,14 @@
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { useState } from 'react'
 
 import { RootReducer } from '../../store'
 import * as S from './styles'
-import { editarContato } from '../../store/reducers/contatos'
+import { editarContato, removerContato } from '../../store/reducers/contatos'
 
 const ContatoViewEdit = () => {
   const dispatch = useDispatch()
+  const navigate = useNavigate()
   const { id } = useParams<{ id: string }>()
   const contato = useSelector((state: RootReducer) =>
     state.contatos.itens.find((c) => c.id === Number(id))
@@ -31,6 +32,13 @@ const ContatoViewEdit = () => {
         })
       )
       setIsEditando(false)
+    }
+  }
+
+  const excluiContato = () => {
+    if (id) {
+      dispatch(removerContato(Number(id)))
+      navigate('/contatos')
     }
   }
 
@@ -98,7 +106,9 @@ const ContatoViewEdit = () => {
                 </S.ButtonContainer>
               ) : (
                 <S.ButtonContainer>
-                  <S.DeleteButton>Excluir contato</S.DeleteButton>
+                  <S.DeleteButton onClick={excluiContato}>
+                    Excluir contato
+                  </S.DeleteButton>
                   <S.EditButton onClick={() => setIsEditando(true)}>
                     Editar
                   </S.EditButton>
