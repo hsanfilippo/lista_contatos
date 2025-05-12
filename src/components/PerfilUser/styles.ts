@@ -33,32 +33,8 @@ export const UserName = styled.p`
   margin-bottom: 16px;
 `
 
-export const SearchBar = styled.div`
-  padding: 24px;
-  text-align: center;
-`
-
-export const SearchInput = styled.input`
-  width: 70%;
-  height: 5vh;
-  padding: 16px;
-  margin-top: 24px;
-  background-color: #f1f1f1;
-  border: none;
-  border-radius: 20px 0 0 20px;
-`
-
 export const Buttons = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 52px;
-`
-
-export const SearchButton = styled.button`
-  background-color: #8944cf;
-  color: #fff;
-  height: 5vh;
-  border: none;
-  width: 15%;
-  border-radius: 0 20px 20px 0;
 `
